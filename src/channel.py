@@ -1,3 +1,6 @@
+import os
+
+API_KEY = os.getenv('API_KEY')
 
 
 class Channel:
@@ -5,8 +8,9 @@ class Channel:
 
     def __init__(self, channel_id: str) -> None:
         """Экземпляр инициализируется id канала. Дальше все данные будут подтягиваться по API."""
-        pass
+
+        self.channel_id = channel_id
 
     def print_info(self) -> None:
         """Выводит в консоль информацию о канале."""
-        pass
+        self.channel_id = API_KEY
